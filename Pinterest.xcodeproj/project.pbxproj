@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		6F8665F320EE3CA800987385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8665F220EE3CA800987385 /* AppDelegate.swift */; };
-		6F8665F520EE3CA800987385 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8665F420EE3CA800987385 /* ViewController.swift */; };
 		6F8665F820EE3CA800987385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F8665F620EE3CA800987385 /* Main.storyboard */; };
 		6F8665FA20EE3CA800987385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F8665F920EE3CA800987385 /* Assets.xcassets */; };
 		6F8665FD20EE3CA800987385 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F8665FB20EE3CA800987385 /* LaunchScreen.storyboard */; };
 		6F86660820EE3CA800987385 /* PinterestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86660720EE3CA800987385 /* PinterestTests.swift */; };
 		6F86661320EE3CA800987385 /* PinterestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86661220EE3CA800987385 /* PinterestUITests.swift */; };
+		6F86662520EE3DE200987385 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86662420EE3DE200987385 /* MainViewController.swift */; };
+		6F86662820EE411B00987385 /* AppInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F86662720EE411B00987385 /* AppInfoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		6F8665EF20EE3CA800987385 /* Pinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F8665F220EE3CA800987385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6F8665F420EE3CA800987385 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6F8665F720EE3CA800987385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6F8665F920EE3CA800987385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F8665FC20EE3CA800987385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		6F86660E20EE3CA800987385 /* PinterestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinterestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F86661220EE3CA800987385 /* PinterestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestUITests.swift; sourceTree = "<group>"; };
 		6F86661420EE3CA800987385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F86662420EE3DE200987385 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6F86662720EE411B00987385 /* AppInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				6F8665F220EE3CA800987385 /* AppDelegate.swift */,
-				6F8665F420EE3CA800987385 /* ViewController.swift */,
+				6F86662620EE3F1400987385 /* Service */,
+				6F86662320EE3DD500987385 /* ViweControllers */,
+				6F86662120EE3DA100987385 /* Networking */,
+				6F86662020EE3D9600987385 /* Views */,
 				6F8665F620EE3CA800987385 /* Main.storyboard */,
 				6F8665F920EE3CA800987385 /* Assets.xcassets */,
 				6F8665FB20EE3CA800987385 /* LaunchScreen.storyboard */,
@@ -123,6 +128,36 @@
 				6F86661420EE3CA800987385 /* Info.plist */,
 			);
 			path = PinterestUITests;
+			sourceTree = "<group>";
+		};
+		6F86662020EE3D9600987385 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F86662720EE411B00987385 /* AppInfoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6F86662120EE3DA100987385 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		6F86662320EE3DD500987385 /* ViweControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6F86662420EE3DE200987385 /* MainViewController.swift */,
+			);
+			path = ViweControllers;
+			sourceTree = "<group>";
+		};
+		6F86662620EE3F1400987385 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F8665F520EE3CA800987385 /* ViewController.swift in Sources */,
 				6F8665F320EE3CA800987385 /* AppDelegate.swift in Sources */,
+				6F86662520EE3DE200987385 /* MainViewController.swift in Sources */,
+				6F86662820EE411B00987385 /* AppInfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X3VD3468HW;
 				INFOPLIST_FILE = Pinterest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,6 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X3VD3468HW;
 				INFOPLIST_FILE = Pinterest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
