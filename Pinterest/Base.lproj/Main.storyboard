@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Top Paid Apps-->
+        <!--Photos-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Pinterest" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,37 +24,27 @@
                                 <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <collectionViewLayout key="collectionViewLayout" id="wog-cv-YGk" customClass="PinterestLayout" customModule="Pinterest" customModuleProvider="target"/>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AppInfoCell" id="rD9-zn-hLf" customClass="AppInfoCell" customModule="Pinterest" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="rD9-zn-hLf" customClass="PhotoCell" customModule="Pinterest" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="172" height="188"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="172" height="188"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJ1-cW-Hy9">
-                                                    <rect key="frame" x="0.0" y="167" width="172" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OPe-DX-1aP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="167"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="188"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="OPe-DX-1aP" secondAttribute="trailing" id="7U8-Ae-mJn"/>
-                                            <constraint firstItem="UJ1-cW-Hy9" firstAttribute="top" secondItem="OPe-DX-1aP" secondAttribute="bottom" id="FJb-9N-YwO"/>
-                                            <constraint firstItem="UJ1-cW-Hy9" firstAttribute="leading" secondItem="rD9-zn-hLf" secondAttribute="leading" id="RZ4-FA-qDa"/>
-                                            <constraint firstAttribute="trailing" secondItem="UJ1-cW-Hy9" secondAttribute="trailing" id="gpN-Ps-p7c"/>
                                             <constraint firstItem="OPe-DX-1aP" firstAttribute="leading" secondItem="rD9-zn-hLf" secondAttribute="leading" id="mQp-Dw-kV2"/>
-                                            <constraint firstAttribute="bottom" secondItem="UJ1-cW-Hy9" secondAttribute="bottom" id="sM3-JN-9hT"/>
                                             <constraint firstItem="OPe-DX-1aP" firstAttribute="top" secondItem="rD9-zn-hLf" secondAttribute="top" id="tlw-XE-zEk"/>
+                                            <constraint firstAttribute="bottom" secondItem="OPe-DX-1aP" secondAttribute="bottom" id="vaq-QY-64i"/>
                                         </constraints>
                                         <size key="customSize" width="172" height="188"/>
                                         <connections>
                                             <outlet property="imageView" destination="OPe-DX-1aP" id="WVF-HR-wi5"/>
-                                            <outlet property="titleLabel" destination="UJ1-cW-Hy9" id="0Qj-iM-rxf"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -72,7 +62,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Top Paid Apps" id="Ppj-qg-8gq"/>
+                    <navigationItem key="navigationItem" title="Photos" id="Ppj-qg-8gq"/>
                     <connections>
                         <outlet property="collectionView" destination="SKq-ea-ICg" id="iK9-Lo-u9c"/>
                     </connections>

@@ -32,11 +32,9 @@ extension MainViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: AppInfoCell = collectionView.dequeueReusableCell(withReuseIdentifier: AppInfoCell.cellIdentifier, for: indexPath) as! AppInfoCell
+        let cell: PhotoCell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.cellIdentifier, for: indexPath) as! PhotoCell
         
-        let item: Int = indexPath.item
         cell.imageView.image = UIImage(named: "placeholder")
-        cell.titleLabel.text = "\(item)"
         
         return cell
     }
