@@ -7,25 +7,24 @@ enum Result<T> {
 }
 
 enum APIError: Error {
-    case jsonDecoder
+    case unknown
     case notResponse
+    case jsonDecoder
+    case imageDownload
 }
 
 protocol APIClient {
     var session: URLSession { get }
-    func get<T: Codable>(with request: URLRequest, completion: @escaping (Result<[T]>) -> Void)
+    func get<T: Codable>(with request: URLRequest, completion: @escaping (Result<T>) -> Void)
 }
 
-// MARK: - Custom method
 extension APIClient {
-    
     var session: URLSession {
         return URLSession.shared
     }
     
-    func get<T: Codable>(with request: URLRequest, completion: @escaping (Result<[T]>) -> Void) {
-        
-        let task: URLSessionTask = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+    func get<T: Codable>(with request: URLRequest, completion: @escaping (Result<T>) -> Void) {
+        let task = session.dataTask(with: request) { (data, response, error) in
             guard error == nil else {
                 completion(.failure(error!))
                 return
@@ -36,7 +35,7 @@ extension APIClient {
                 return
             }
             
-            guard let data: Data = data, let value: [T] = try? JSONDecoder().decode([T].self, from: data) else {
+            guard let data: Data = data, let value: T = try? JSONDecoder().decode(T.self, from: data) else {
                 completion(.failure(APIError.jsonDecoder))
                 return
             }
@@ -45,7 +44,6 @@ extension APIClient {
                 completion(.success(value))
             }
         }
-        
         task.resume()
     }
 }
