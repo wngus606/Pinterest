@@ -110,10 +110,10 @@
 			isa = PBXGroup;
 			children = (
 				6F8665F220EE3CA800987385 /* AppDelegate.swift */,
-				6F86662620EE3F1400987385 /* Service */,
 				6F86662320EE3DD500987385 /* ViweControllers */,
 				6F86662120EE3DA100987385 /* Networking */,
 				6F86662020EE3D9600987385 /* Views */,
+				CA2FC2042171EAC50044F07F /* Models */,
 				6F8665F620EE3CA800987385 /* Main.storyboard */,
 				6F8665F920EE3CA800987385 /* Assets.xcassets */,
 				6F8665FB20EE3CA800987385 /* LaunchScreen.storyboard */,
@@ -168,11 +168,11 @@
 			path = ViweControllers;
 			sourceTree = "<group>";
 		};
-		6F86662620EE3F1400987385 /* Service */ = {
+		CA2FC2042171EAC50044F07F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Service;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,7 +487,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X3VD3468HW;
+				DEVELOPMENT_TEAM = 3D2GFZ7CZT;
 				INFOPLIST_FILE = Pinterest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -495,7 +495,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.seoju.Pinterest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -505,7 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X3VD3468HW;
+				DEVELOPMENT_TEAM = 3D2GFZ7CZT;
 				INFOPLIST_FILE = Pinterest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -513,7 +513,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.seoju.Pinterest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

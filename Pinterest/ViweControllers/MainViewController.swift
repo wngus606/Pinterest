@@ -20,7 +20,7 @@ extension MainViewController {
             layout.delegate = self
         }
         
-        collectionView.contentInset = UIEdgeInsetsMake(10, 10, 10, 10)
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
 }
 
