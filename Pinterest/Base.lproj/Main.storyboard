@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IYJ-cN-8La">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IYJ-cN-8La">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,27 +24,41 @@
                                 <inset key="scrollIndicatorInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                 <collectionViewLayout key="collectionViewLayout" id="wog-cv-YGk" customClass="PinterestLayout" customModule="Pinterest" customModuleProvider="target"/>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="rD9-zn-hLf" customClass="PhotoCell" customModule="Pinterest" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="172" height="188"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCell" id="rD9-zn-hLf" customClass="MovieCell" customModule="Pinterest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="172" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="172" height="188"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="172" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OPe-DX-1aP">
-                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="188"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OPe-DX-1aP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="172"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="OPe-DX-1aP" secondAttribute="height" id="rqB-b8-aS4"/>
+                                                    </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFe-ke-XB1">
+                                                    <rect key="frame" x="0.0" y="172" width="172" height="28"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="OPe-DX-1aP" secondAttribute="trailing" id="7U8-Ae-mJn"/>
-                                            <constraint firstItem="OPe-DX-1aP" firstAttribute="leading" secondItem="rD9-zn-hLf" secondAttribute="leading" id="mQp-Dw-kV2"/>
-                                            <constraint firstItem="OPe-DX-1aP" firstAttribute="top" secondItem="rD9-zn-hLf" secondAttribute="top" id="tlw-XE-zEk"/>
-                                            <constraint firstAttribute="bottom" secondItem="OPe-DX-1aP" secondAttribute="bottom" id="vaq-QY-64i"/>
+                                            <constraint firstAttribute="bottom" secondItem="NFe-ke-XB1" secondAttribute="bottom" id="7wv-zS-zWo"/>
+                                            <constraint firstAttribute="trailing" secondItem="NFe-ke-XB1" secondAttribute="trailing" id="9cW-cR-qrO"/>
+                                            <constraint firstAttribute="trailing" secondItem="OPe-DX-1aP" secondAttribute="trailing" id="Vh3-tQ-pen"/>
+                                            <constraint firstItem="OPe-DX-1aP" firstAttribute="top" secondItem="rD9-zn-hLf" secondAttribute="top" id="Xgi-06-DbG"/>
+                                            <constraint firstItem="OPe-DX-1aP" firstAttribute="width" secondItem="rD9-zn-hLf" secondAttribute="width" id="amz-Fd-xr3"/>
+                                            <constraint firstItem="OPe-DX-1aP" firstAttribute="leading" secondItem="rD9-zn-hLf" secondAttribute="leading" id="h22-oS-uV8"/>
+                                            <constraint firstItem="NFe-ke-XB1" firstAttribute="leading" secondItem="rD9-zn-hLf" secondAttribute="leading" id="iod-Ws-y2V"/>
+                                            <constraint firstItem="NFe-ke-XB1" firstAttribute="top" secondItem="OPe-DX-1aP" secondAttribute="bottom" id="xSW-sN-D2V"/>
                                         </constraints>
-                                        <size key="customSize" width="172" height="188"/>
+                                        <size key="customSize" width="172" height="200"/>
                                         <connections>
-                                            <outlet property="imageView" destination="OPe-DX-1aP" id="WVF-HR-wi5"/>
+                                            <outlet property="thumbnailImageView" destination="OPe-DX-1aP" id="Tdw-ac-Xth"/>
+                                            <outlet property="titleLabel" destination="NFe-ke-XB1" id="cNC-6c-Meb"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

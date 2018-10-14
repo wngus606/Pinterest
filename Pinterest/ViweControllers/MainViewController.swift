@@ -4,11 +4,14 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-
+    
+    let viewModel = MovieViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initialization()
+        configurationViewModel()
     }
 }
 
@@ -19,8 +22,16 @@ extension MainViewController {
         if let layout = collectionView.collectionViewLayout as? PinterestLayout {
             layout.delegate = self
         }
-        
+
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
+    
+    func configurationViewModel() {
+        viewModel.request(page: 1) { [weak self] in
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
+        }
     }
 }
 
@@ -28,14 +39,14 @@ extension MainViewController {
 extension MainViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        print("count : \(viewModel.numberOfCells)")
+        return viewModel.numberOfCells
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: PhotoCell = collectionView.dequeueReusableCell(withReuseIdentifier: PhotoCell.cellIdentifier, for: indexPath) as! PhotoCell
-        
-        cell.imageView.image = UIImage(named: "placeholder")
-        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCell", for: indexPath) as? MovieCell else { return MovieCell() }
+        let item = indexPath.item
+        cell.model(viewModel.models[item])
         return cell
     }
 }
@@ -44,6 +55,6 @@ extension MainViewController: UICollectionViewDataSource {
 extension MainViewController: PinterestLayoutDelegate {
     
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
-        return 100.0
+        return 200.0
     }
 }
